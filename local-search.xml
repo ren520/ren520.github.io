@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
+    <url>/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/</url>
+    
+    <content type="html"><![CDATA[<p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p><h1 id="jdk的安装目录"><a href="#jdk的安装目录" class="headerlink" title="jdk的安装目录"></a>jdk的安装目录</h1><p>linux中最标准的java jdk安装目录是：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/usr/<span class="hljs-built_in">local</span>/java/<br></code></pre></td></tr></table></figure><p>在/usr/local下创建一个名为java的文件夹</p><h1 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h1><p><strong>一、去官网选择自己所需的jdk</strong><br>官网地址：<a href="https://www.oracle.com/java/technologies/downloads/">下载地址</a></p><p>例如，我选择的是jdk17<br><img src="https://img-blog.csdnimg.cn/e05848f9b4a84b4da5f2ccbc6c5d4c7a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5pu-5bCa5LuB,size_20,color_FFFFFF,t_70,g_se,x_16" alt="选择合适的jdk"><br><strong>二、复制红框的链接。</strong><br>复制红框的链接后，进入linux系统中/usr/local/java/<br>然后敲如下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz<br></code></pre></td></tr></table></figure><p>注意，wget后面的链接是你刚刚复制的链接！</p><h1 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h1><p><strong>一、解压</strong><br>下载了上面的jdk后，会在/usr/local/java中看见这个文件，随后解压：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar zxf xxx.tar.gz <br></code></pre></td></tr></table></figure><p>xxx修改成对应的包的文件名即可<br>解压成功后可以删除这个包</p><p><strong>二、配置环境变量</strong><br>修改相关配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/profile<br></code></pre></td></tr></table></figure><p>打开文件后再末尾添加：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> JAVA17_HOME=/jdk17/jdk-17.0.1<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA17_HOME</span>/bin<br></code></pre></td></tr></table></figure><p>注意修改对应的版本。我这里是17。<br>最后输入命令让配置文件生效：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile<br></code></pre></td></tr></table></figure><p><strong>三、查看java版本</strong><br>输入命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version<br></code></pre></td></tr></table></figure><p>查看到对应java版本即安装结束</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2021/11/05/hello-world/"/>
     <url>/2021/11/05/hello-world/</url>
