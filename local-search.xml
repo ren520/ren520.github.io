@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>docker下载太慢，更换镜像源</title>
+    <link href="/2021/11/07/docker%E4%B8%8B%E8%BD%BD%E5%A4%AA%E6%85%A2%EF%BC%8C%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/"/>
+    <url>/2021/11/07/docker%E4%B8%8B%E8%BD%BD%E5%A4%AA%E6%85%A2%EF%BC%8C%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</url>
+    
+    <content type="html"><![CDATA[<h1 id="比较快的镜像源"><a href="#比较快的镜像源" class="headerlink" title="比较快的镜像源"></a>比较快的镜像源</h1><table><thead><tr><th>网站</th><th>网址</th></tr></thead><tbody><tr><td>网易云</td><td><a href="https://hub-mirror.c.163.com/">https://hub-mirror.c.163.com</a></td></tr><tr><td>百度云</td><td><a href="https://mirror.baidubce.com/">https://mirror.baidubce.com</a></td></tr><tr><td>阿里云</td><td><a href="https://ustc-edu-cn.mirror.aliyuncs.com/">https://ustc-edu-cn.mirror.aliyuncs.com</a></td></tr></tbody></table><h1 id="编辑配置文件"><a href="#编辑配置文件" class="headerlink" title="编辑配置文件"></a>编辑配置文件</h1><p>编辑 /etc/docker/daemon.json 配置文件</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">创建配置文件目录<br>$ sudo mkdir /etc/docker<br><br>编辑配置文件，如果文件不存在，需要自己创建一个。<br>$ sudo vim /etc/docker/daemon.json<br><br>将配置信息粘贴到配置文件中，配置信息为 json 格式，可以根据实际需要设置多个国内的镜像服务器。<br>&#123;<br>  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<br><span class="hljs-string">&quot;https://ustc-edu-cn.mirror.aliyuncs.com&quot;</span><br>  ]<br>&#125;<br></code></pre></div></td></tr></table></figure><h1 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h1><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ sudo systemctl daemon-reload <br>$ sudo systemctl restart docker<br></code></pre></div></td></tr></table></figure><h1 id="查看镜像源"><a href="#查看镜像源" class="headerlink" title="查看镜像源"></a>查看镜像源</h1><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ sudo docker info<br></code></pre></div></td></tr></table></figure><p>如果看到相关网址已经更改即修改成功！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>linux|ubuntu 安装jdk</title>
     <link href="/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
     <url>/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/</url>
