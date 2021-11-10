@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=dark>
+<html lang="en,zh-CN,ja,de,eo,default" data-default-color-scheme=dark>
 
 
 
@@ -13,14 +13,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="description" content="尚仁的博客">
+  <meta name="author" content="曾尚仁">
   <meta name="keywords" content="">
   <meta name="description" content="在linux下实现进程通信 预备知识操作系统IPC类别操作系统内部的 IPC基本分为三个类别：  共享内存 - Shared Memory； 消息传递 - Message Passing Interface； 管道 - Pipe  常见的四种IPC实践四种单机 IPC 方式进行学习和手动实践：  管道； 信号-Signal； 消息传递； 共享内存  开始实验在开始实验之前，我们的所有操作都在&#x2F;dr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux实现进程通信的四种常见方式">
 <meta property="og:url" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="曾尚仁">
 <meta property="og:description" content="在linux下实现进程通信 预备知识操作系统IPC类别操作系统内部的 IPC基本分为三个类别：  共享内存 - Shared Memory； 消息传递 - Message Passing Interface； 管道 - Pipe  常见的四种IPC实践四种单机 IPC 方式进行学习和手动实践：  管道； 信号-Signal； 消息传递； 共享内存  开始实验在开始实验之前，我们的所有操作都在&#x2F;dr">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C1-1.png">
@@ -32,12 +32,12 @@
 <meta property="og:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C5-2.png">
 <meta property="article:published_time" content="2021-11-09T13:25:00.000Z">
 <meta property="article:modified_time" content="2021-11-09T13:57:00.124Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="曾尚仁">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C1-1.png">
   
-  <title>linux实现进程通信的四种常见方式 - Hexo</title>
+  <title>linux实现进程通信的四种常见方式 - 曾尚仁</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -254,7 +254,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：a few seconds ago
+                  本文最后更新于：12 hours ago
                 
               </p>
             
