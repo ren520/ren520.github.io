@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en,zh-CN,ja,de,eo,default" data-default-color-scheme=dark>
+<html lang="zh-CN" data-default-color-scheme=dark>
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="曾尚仁">
 <meta property="og:description" content="在linux下实现进程通信 预备知识操作系统IPC类别操作系统内部的 IPC基本分为三个类别：  共享内存 - Shared Memory； 消息传递 - Message Passing Interface； 管道 - Pipe  常见的四种IPC实践四种单机 IPC 方式进行学习和手动实践：  管道； 信号-Signal； 消息传递； 共享内存  开始实验在开始实验之前，我们的所有操作都在&#x2F;dr">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C1-1.png">
 <meta property="og:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C2-1.png">
 <meta property="og:image" content="http://example.com/2021/11/09/linux%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/%E5%AE%9E%E9%AA%8C3-1.png">
@@ -106,7 +106,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                Home
+                首页
               </a>
             </li>
           
@@ -118,7 +118,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                Archives
+                归档
               </a>
             </li>
           
@@ -130,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                Categories
+                分类
               </a>
             </li>
           
@@ -142,7 +142,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                Tags
+                标签
               </a>
             </li>
           
@@ -154,7 +154,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                About
+                关于
               </a>
             </li>
           
@@ -194,7 +194,7 @@
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
       <time datetime="2021-11-09 21:25" pubdate>
-        November 9, 2021 pm
+        2021年11月9日 晚上
       </time>
     </span>
   
@@ -254,7 +254,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：12 hours ago
+                  本文最后更新于：12 小时前
                 
               </p>
             
@@ -336,7 +336,7 @@
                     
                       <a href="/2021/11/09/%E6%B7%BB%E5%8A%A0%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97%EF%BC%88%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E8%B0%83%E7%94%A8%EF%BC%89/">
                         <span class="hidden-mobile">linux添加内核模块（实现进程调用）</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -353,7 +353,7 @@
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -379,7 +379,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -388,7 +388,7 @@
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                 for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
