@@ -11,6 +11,14 @@
     <content type="html"><![CDATA[<h1 id="SSM和MVC是什么"><a href="#SSM和MVC是什么" class="headerlink" title="SSM和MVC是什么"></a>SSM和MVC是什么</h1><p>SSM是指spring+springMVC+mybatis集成的框架；MVC是指model+view+controller</p><h1 id="各层的作用"><a href="#各层的作用" class="headerlink" title="各层的作用"></a>各层的作用</h1><h2 id="model（entity）层"><a href="#model（entity）层" class="headerlink" title="model（entity）层"></a>model（entity）层</h2><p>实体类，属性和数据表的属性保持一致</p><h2 id="service层"><a href="#service层" class="headerlink" title="service层"></a>service层</h2><p>存放业务逻辑，也是关于数据库的一些操作。但是并不是直接面对数据库，它有接口和接口的实现方法。在接口实现方法中，需要使用mapper（dao）层。这里的mapper和dao层的区别在下文有描述。mapper层是直接和数据库打交道的。它也是一个接口，只有方法和名字。<br>在实际开发中，service层提供我们实际使用的方法。当然，service之间可以互相调用</p><h2 id="mapper（dao-层"><a href="#mapper（dao-层" class="headerlink" title="mapper（dao)层"></a>mapper（dao)层</h2><p>使用mybatis逆向工程生成的mapper层，实际上就是dao层。对数据库进行持久化操作。（数据持久化操作就是指，把数据放到持久化的介质中，同时提供增删改查操作，比如数据通过hibernate插入到数据库中。）<br>dao层隐藏了这种实现细节，更换数据库或者文件或者内存，对调用dao的更高层来说不受影响。 mapper和dao不同，mapper的目的是为了把关系数据库映射成java类（对象）。 因此，如果只有mapper没有dao层，那么一旦项目需要把数据保存到文件或者内存，那么调用mapper的高层就会受到影响。 一般的项目可能只会使用数据库作为数据存储，所以mapper和dao可以说上就是一个东西了。</p><h2 id="controller层"><a href="#controller层" class="headerlink" title="controller层"></a>controller层</h2><p>控制器，导入service层。因为service中的方法是我们使用到的，controller通过接收前端传过来的参数进行业务操作，在返回一个指定的路径或者数据表。用户在view中发送数据到controller层，然后controller根据用户请求，决定使用什么视图和数据进行表示。在这个过程中，controller会使用到service的一些业务逻辑处理，也就是数据库的操作。</p>]]></content>
     
     
+    <categories>
+      
+      <category>后端</category>
+      
+      <category>springboot</category>
+      
+    </categories>
+    
     
     <tags>
       
