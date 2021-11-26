@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>黑盒测试</title>
+    <link href="/2021/11/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+    <url>/2021/11/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>黑盒存世仅需要知道被测对象的输入和预期输出，不需要了解实现的细节。</p><h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ol><li>黑盒测试方法对测试人员的技术要求相对较低</li><li>黑盒测试不需要了解程序实现的细节。测试团队和开发团队可以并行完成各自的任务<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2>测试结果的覆盖度不容易度量，测试的潜在风险高<h2 id="适用对象"><a href="#适用对象" class="headerlink" title="适用对象"></a>适用对象</h2><h3 id="当被测对象是函数的时候"><a href="#当被测对象是函数的时候" class="headerlink" title="当被测对象是函数的时候"></a>当被测对象是函数的时候</h3></li><li>完成对函数功能的测试</li><li>无需查看函数代码，只需要了解函数接口和返回值</li><li>对应单元测试阶段<h3 id="当对象为功能的时候"><a href="#当对象为功能的时候" class="headerlink" title="当对象为功能的时候"></a>当对象为功能的时候</h3></li><li>完成对整个软件系统功能的易用性等测试</li><li>无需看各功能点如何变成实现，只需要了解SRS中关于输入输出的规定</li><li>对应系统测试，所有用户共同参与的验收测试阶段<h2 id="测试方法的评价"><a href="#测试方法的评价" class="headerlink" title="测试方法的评价"></a>测试方法的评价</h2></li><li>测试用例对被测对象的覆盖率</li><li>测试用例的冗余</li><li>测试用例的数量</li><li>测试用例对缺陷的定位能力</li><li>测试用例的设计复杂度</li></ol><h1 id="边界值测试"><a href="#边界值测试" class="headerlink" title="边界值测试"></a>边界值测试</h1><h1 id="等价类测试"><a href="#等价类测试" class="headerlink" title="等价类测试"></a>等价类测试</h1><h1 id="基于决策表的测试"><a href="#基于决策表的测试" class="headerlink" title="基于决策表的测试"></a>基于决策表的测试</h1><h1 id="基于场景的测试"><a href="#基于场景的测试" class="headerlink" title="基于场景的测试"></a>基于场景的测试</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件测试</category>
+      
+      <category>黑盒测试</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>First集和Follow集</title>
     <link href="/2021/11/20/First%E9%9B%86%E5%92%8CFollow%E9%9B%86/"/>
     <url>/2021/11/20/First%E9%9B%86%E5%92%8CFollow%E9%9B%86/</url>
