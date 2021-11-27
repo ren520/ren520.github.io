@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>白盒测试</title>
+    <link href="/2021/11/27/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+    <url>/2021/11/27/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="白盒测试和黑盒测试的区别"><a href="#白盒测试和黑盒测试的区别" class="headerlink" title="白盒测试和黑盒测试的区别"></a>白盒测试和黑盒测试的区别</h2><p>黑盒测试：基于软件需求</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件测试</category>
+      
+      <category>白盒测试</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>黑盒测试</title>
     <link href="/2021/11/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
     <url>/2021/11/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/</url>
