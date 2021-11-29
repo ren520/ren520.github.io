@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="尚仁的博客">
+  <meta name="author" content="曾尚仁">
+  <meta name="keywords" content="">
+  <meta name="description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oralceORCL VSS Writer ServiceOracleOraDb1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle数据库管理">
+<meta property="og:url" content="http://example.com/2021/11/28/oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="曾尚仁">
+<meta property="og:description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oralceORCL VSS Writer ServiceOracleOraDb1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-28T03:07:00.000Z">
+<meta property="article:modified_time" content="2021-11-28T04:01:56.546Z">
+<meta property="article:author" content="曾尚仁">
+<meta property="article:tag" content="oracle数据库">
+<meta name="twitter:card" content="summary_large_image">
+  
+  <title>oracle数据库管理 - 曾尚仁</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<head>
+  <!-- 恶搞标题 -->
+  <script type="text/javascript" src="\js\FunnyTitle.js"></script>
+  <!-- 单击显示文字 -->
+  <!-- <script type="text/javascript" src="\js\click_show_text.js"></script> -->
+  <!-- <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>曾尚仁</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="oracle数据库管理">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      曾尚仁
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-28 11:07" pubdate>
+        2021年11月28日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">oracle数据库管理</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 天前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="oracle服务"><a href="#oracle服务" class="headerlink" title="oracle服务"></a>oracle服务</h1><h2 id="oracleserviceoracl"><a href="#oracleserviceoracl" class="headerlink" title="oracleserviceoracl"></a>oracleserviceoracl</h2><p>该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库</p>
+<h2 id="oracleoradb11g-home1TNSlistener"><a href="#oracleoradb11g-home1TNSlistener" class="headerlink" title="oracleoradb11g_home1TNSlistener"></a>oracleoradb11g_home1TNSlistener</h2><p>该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。</p>
+<h2 id="oralceORCL-VSS-Writer-Service"><a href="#oralceORCL-VSS-Writer-Service" class="headerlink" title="oralceORCL VSS Writer Service"></a>oralceORCL VSS Writer Service</h2><h2 id="OracleOraDb11g-home1ClrAgent"><a href="#OracleOraDb11g-home1ClrAgent" class="headerlink" title="OracleOraDb11g_home1ClrAgent"></a>OracleOraDb11g_home1ClrAgent</h2><h2 id="OracleJobSchedulerORCL"><a href="#OracleJobSchedulerORCL" class="headerlink" title="OracleJobSchedulerORCL"></a>OracleJobSchedulerORCL</h2><h1 id="oracle数据库的启动和关闭"><a href="#oracle数据库的启动和关闭" class="headerlink" title="oracle数据库的启动和关闭"></a>oracle数据库的启动和关闭</h1><ol>
+<li>启动：oracleservice服务启动之后，就可以操作数据库了</li>
+<li>关闭：shutdown immediate</li>
+<li>重新启动oracle数据库和实例：startup open</li>
+</ol>
+<h1 id="oracle用户"><a href="#oracle用户" class="headerlink" title="oracle用户"></a>oracle用户</h1><p>oracle数据库内有许多表。其中有某一堆表属于用户A。数据库中的用户，用于组织和管理数据库对象的。通常一个应用软件的数据库对象存放在一个数据库用户下。使用数据库用户连接数据库后，可以对这些数据库对象进行操作。</p>
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">-- Create the user </span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">user</span> student<span class="hljs-comment">--用户名</span><br>  identified <span class="hljs-keyword">by</span> &quot;123456&quot;<span class="hljs-comment">--密码</span><br>  <span class="hljs-keyword">default</span> tablespace USERS<span class="hljs-comment">--表空间名</span><br>  temporary tablespace temp <span class="hljs-comment">--临时表空间名</span><br>  profile <span class="hljs-keyword">DEFAULT</span>    <span class="hljs-comment">--数据文件（默认数据文件）</span><br>  account unlock; <span class="hljs-comment">-- 账户是否解锁（lock:锁定、unlock解锁）</span><br><br></code></pre></div></td></tr></table></figure>
+
+<p>但是这个用户还不能登录数据库，因为它还没有权限，至少需要一create session系统权限才能登录数据库</p>
+<h1 id="oracle权限"><a href="#oracle权限" class="headerlink" title="oracle权限"></a>oracle权限</h1><p>权限必须是由系统管理员sys分配的<br>oracle数据库用户权限分为：系统权限和对象权限两种</p>
+<ol>
+<li>系统权限：比如create session可以和数据库进行连接，create table、create view等可以创建表格或者视图</li>
+<li>对象权限：比如对表中的数据进行增删改查操作，拥有数据库对象权限的用户可以对所拥有的的权限的表格进行操作。<h2 id="具体权限："><a href="#具体权限：" class="headerlink" title="具体权限："></a>具体权限：</h2></li>
+<li>select</li>
+<li>insert</li>
+<li>update</li>
+<li>delete</li>
+<li>references</li>
+<li>alter</li>
+<li>index</li>
+<li>execute</li>
+<li>read</li>
+</ol>
+<h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><p>角色就是一组权限的集合。用户可以拥有某种角色或者多个角色。<br>常用的数据库角色有</p>
+<ol>
+<li>connect角色，是oracle用户的基本角色，代表用户可以和oracle数据库连接，建立session</li>
+<li>resource角色，是开发过程中常用的角色。RESOURCE给用户提供了可以创建自己的对象，包括：表、视图、序列、过程、触发器、索引、包、类型等。</li>
+<li>DBA角色：DBA角色是管理数据库管理员该有的角色。它拥护系统了所有权限，和给其他用户授权的权限。SYSTEM用户就具有DBA权限。</li>
+</ol>
+<p>授权和取消用户权限：</p>
+<figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">--GRANT 对象权限 on 对象 TO 用户    </span><br><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span>, <span class="hljs-keyword">insert</span>, update, <span class="hljs-keyword">delete</span> <span class="hljs-keyword">on</span> JSQUSER <span class="hljs-keyword">to</span> STUDENT;<br><br><span class="hljs-comment">--GRANT 系统权限 to 用户</span><br><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span> <span class="hljs-keyword">any</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">to</span> STUDENT;<br><br><span class="hljs-comment">--GRANT 角色 TO 用户</span><br><span class="hljs-keyword">grant</span> <span class="hljs-keyword">connect</span> <span class="hljs-keyword">to</span> STUDENT;<span class="hljs-comment">--授权connect角色</span><br><span class="hljs-keyword">grant</span> resource <span class="hljs-keyword">to</span> STUDENT;<span class="hljs-comment">--授予resource角色</span><br><br><span class="hljs-comment">-- Revoke 对象权限 on 对象 from 用户 </span><br><span class="hljs-keyword">revoke</span> <span class="hljs-keyword">select</span>, <span class="hljs-keyword">insert</span>, update, <span class="hljs-keyword">delete</span> <span class="hljs-keyword">on</span> JSQUSER <span class="hljs-keyword">from</span> STUDENT;<br><br><span class="hljs-comment">-- Revoke 系统权限  from 用户</span><br><span class="hljs-keyword">revoke</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ANY</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">from</span> STUDENT;<br><br><span class="hljs-comment">-- Revoke 角色（role） from 用户</span><br><span class="hljs-keyword">revoke</span> RESOURCE <span class="hljs-keyword">from</span> STUDENT;<br></code></pre></div></td></tr></table></figure>
+
+
+<h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">--修改用户信息</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">user</span> STUDENT<br>  identified <span class="hljs-keyword">by</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>  <span class="hljs-comment">--修改密码</span><br>  account lock;<span class="hljs-comment">--修改用户处于锁定状态或者解锁状态 （LOCK|UNLOCK ）</span><br></code></pre></div></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/oracle%E6%95%B0%E6%8D%AE%E5%BA%93/">oracle数据库</a>
+                    
+                      <a class="hover-with-bg" href="/categories/oracle%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0-1-oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/">第一章 1. oracle数据库管理</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/oracle%E6%95%B0%E6%8D%AE%E5%BA%93/">oracle数据库</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/11/28/sql/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">sql</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/27/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/">
+                        <span class="hidden-mobile">白盒测试</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <div>落霞与孤鹜齐飞，秋水共长天一色</div> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div>
+
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
