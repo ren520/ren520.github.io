@@ -17,15 +17,15 @@
   <meta name="description" content="尚仁的博客">
   <meta name="author" content="曾尚仁">
   <meta name="keywords" content="">
-  <meta name="description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oralceORCL VSS Writer ServiceOracleOraDb1">
+  <meta name="description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oracle数据库的启动和关闭 启动：oracleservice服务启动之后，就可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle数据库管理">
 <meta property="og:url" content="http://example.com/2021/11/28/oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="曾尚仁">
-<meta property="og:description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oralceORCL VSS Writer ServiceOracleOraDb1">
+<meta property="og:description" content="oracle服务oracleserviceoracl该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库 oracleoradb11g_home1TNSlistener该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。 oracle数据库的启动和关闭 启动：oracleservice服务启动之后，就可">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-28T03:07:00.000Z">
-<meta property="article:modified_time" content="2021-12-24T15:41:15.581Z">
+<meta property="article:modified_time" content="2022-01-02T15:44:23.306Z">
 <meta property="article:author" content="曾尚仁">
 <meta property="article:tag" content="oracle数据库">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      3.2k 字
     </span>
   
 
@@ -231,7 +231,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      10 分钟
     </span>
   
 
@@ -272,14 +272,14 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：10 分钟前
+                  本文最后更新于：2 天前
                 
               </p>
             
             <div class="markdown-body">
               <h1 id="oracle服务"><a href="#oracle服务" class="headerlink" title="oracle服务"></a>oracle服务</h1><h2 id="oracleserviceoracl"><a href="#oracleserviceoracl" class="headerlink" title="oracleserviceoracl"></a>oracleserviceoracl</h2><p>该服务是oracle数据库的基础，只有启动该服务才能正常使用oracle数据库</p>
 <h2 id="oracleoradb11g-home1TNSlistener"><a href="#oracleoradb11g-home1TNSlistener" class="headerlink" title="oracleoradb11g_home1TNSlistener"></a>oracleoradb11g_home1TNSlistener</h2><p>该服务为oracle数据库提供监听程序服务，只有启动该服务，本地的客户端程序才能通过监听程序连接数据库，和数据库进行交互。</p>
-<h2 id="oralceORCL-VSS-Writer-Service"><a href="#oralceORCL-VSS-Writer-Service" class="headerlink" title="oralceORCL VSS Writer Service"></a>oralceORCL VSS Writer Service</h2><h2 id="OracleOraDb11g-home1ClrAgent"><a href="#OracleOraDb11g-home1ClrAgent" class="headerlink" title="OracleOraDb11g_home1ClrAgent"></a>OracleOraDb11g_home1ClrAgent</h2><h2 id="OracleJobSchedulerORCL"><a href="#OracleJobSchedulerORCL" class="headerlink" title="OracleJobSchedulerORCL"></a>OracleJobSchedulerORCL</h2><h1 id="oracle数据库的启动和关闭"><a href="#oracle数据库的启动和关闭" class="headerlink" title="oracle数据库的启动和关闭"></a>oracle数据库的启动和关闭</h1><ol>
+<h1 id="oracle数据库的启动和关闭"><a href="#oracle数据库的启动和关闭" class="headerlink" title="oracle数据库的启动和关闭"></a>oracle数据库的启动和关闭</h1><ol>
 <li>启动：oracleservice服务启动之后，就可以操作数据库了</li>
 <li>关闭：shutdown immediate</li>
 <li>重新启动oracle数据库和实例：startup open</li>
@@ -318,6 +318,28 @@
 </ol>
 <p>新创建的角色是没有任何权限的，需要手动分配系统权限和对象权限给它。系统选线和对象权限需要分开授权</p>
 <h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">--修改用户信息</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">user</span> STUDENT<br>  identified <span class="hljs-keyword">by</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>  <span class="hljs-comment">--修改密码</span><br>  account lock;<span class="hljs-comment">--修改用户处于锁定状态或者解锁状态 （LOCK|UNLOCK ）</span><br></code></pre></div></td></tr></table></figure>
+
+<h1 id="管理数据文件"><a href="#管理数据文件" class="headerlink" title="管理数据文件"></a>管理数据文件</h1><p>顾名思义，数据库中的数据都是要存储在磁盘的，以磁盘或者硬盘数据文件形式保存<br><strong>数据文件只属于一个表空间，生成的时候必须指定表空间，否则是垃圾文件。</strong></p>
+<pre><code class=" mermaid">graph TD;
+数据库--&gt;表空间;
+表空间--&gt;数据文件1;
+表空间--&gt;数据文件n;
+表空间--&gt;数据文件2;
+</code></pre>
+<h2 id="作用？"><a href="#作用？" class="headerlink" title="作用？"></a>作用？</h2><ol>
+<li>遵守限制，确定数据文件的大小和数量</li>
+<li>提高效率，合理放置文件，例如放在不同磁盘减少io冲突</li>
+<li>消除竞争，将数据文件和日志文件分散放置</li>
+</ol>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">#为表空间添加数据文件<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span>SPACE MYTS01 <span class="hljs-keyword">ADD</span> DATAFILE <span class="hljs-string">&#x27;D:\ORADATA\myts01_03.dbf&#x27;</span>SIZE <span class="hljs-number">6</span>M;<br><br>#为表空间添加临时数据文件<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span>SPACE MYTMPTS01 <span class="hljs-keyword">ADD</span> TEMPFILE <span class="hljs-string">&#x27;D:\ORADATA\mytmpts01_3.dbf &#x27;</span>SIZE <span class="hljs-number">4</span>M;<br><br>#在创建表空间MYTS02时将数据文件myts02_1.dbf设置为自<br>动增长方式。<br><span class="hljs-keyword">CREATE</span> SMALLFILE TABLESPACE MYTS02<br>DATAFILE <span class="hljs-string">&#x27;D:\ORADATA\myts02_1.dbf&#x27;</span> SIZE <span class="hljs-number">2</span>M<br>AUTOEXTEND <span class="hljs-keyword">ON</span><br><br>#在表空间myts02创建之后再添加一个新的自动增长方式的数据文件。<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span>SPACE myts02 <span class="hljs-keyword">ADD</span> DATAFILE <span class="hljs-string">&#x27;D:\ORADATA\mytts02_2.dbf &#x27;</span>SIZE <span class="hljs-number">4</span>M<br>AUTOEXTEND <span class="hljs-keyword">ON</span><br>NEXT <span class="hljs-number">4</span>K<br>MAXSIZE <span class="hljs-number">40</span>M;<br><br>#使用下面语句将数据文件myts01_03.dbf设置为自动增长方式<br><span class="hljs-keyword">ALTER</span> DATABASE<br>DATAFILE <span class="hljs-string">&#x27;D:\ORADATA\myts01_03.dbf‘</span><br><span class="hljs-string">AUTOEXTEND ON</span><br><span class="hljs-string">NEXT 2M</span><br><span class="hljs-string">MAXSIZE 20M;</span><br><span class="hljs-string"></span><br><span class="hljs-string">#关闭自动增长</span><br><span class="hljs-string">ALTER DATABASE DATAFILE &#x27;</span>D:\ORADATA\myts01_03.dbf<span class="hljs-string">&#x27; AUTOEXTEND OFF;</span><br><span class="hljs-string"></span><br><span class="hljs-string">#修改数据文件大小</span><br><span class="hljs-string">ALTER DATABASE DATAFILE &#x27;</span>D:\ORADATA\myts01_03.dbf<span class="hljs-string">&#x27;</span><br><span class="hljs-string">RESIZE 8M;</span><br><span class="hljs-string"></span><br><span class="hljs-string">#修改可用性</span><br><span class="hljs-string">ALTER DATABASE DATAFILE &#x27;</span>D:\ORADATA\mytts02_2.dbf‘ online;<br><br></code></pre></div></td></tr></table></figure>
+
+<h1 id="管理重做日志文件"><a href="#管理重做日志文件" class="headerlink" title="管理重做日志文件"></a>管理重做日志文件</h1><p>重做日志文件主要以重做记录的形式记录、保存对数据库所做的修改（事务）。<br>如果对一个表的数据进行了修改，并完成了事务的提交，这是数据文件中只保持<br>修改后的数据，但重做日志文件中要记录两类数据：修改前与修改后的数据</p>
+<h2 id="切换日志文件"><a href="#切换日志文件" class="headerlink" title="切换日志文件"></a>切换日志文件</h2><p>日志切换：当LGWR停止向某个重做日志文件组写入而开始向另一<br>个联机重做日志文件组写入的那一刻</p>
+<ol>
+<li>通常发生在当前重做日志文件已经完全填满，而且必须继续填写下一个联机重做日志文件的时候。然而可以用基于时间的方式指定日志切换发生的时刻</li>
+<li>强行日志切换：是使当前活动组变成非活动的，以便对该组实施重做日志文件的维护操作。必须拥有ALTER SYSTEM 权限。如果有这种权限，使用带SWITH LOGFILE字句的ALTER SYSTEM语句就可以强制实施日志切换，如：<strong>ALTER SYSTEM SWITCH LOGFILE；</strong></li>
+</ol>
+
             </div>
             <hr>
             <div>
