@@ -17,6 +17,31 @@
   
   
   <entry>
+    <title>软件工程</title>
+    <link href="/2022/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    <url>/2022/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><h2 id="软件的概念"><a href="#软件的概念" class="headerlink" title="软件的概念"></a>软件的概念</h2><p>程序+数据+文档</p><h2 id="软件工程是什么？"><a href="#软件工程是什么？" class="headerlink" title="软件工程是什么？"></a>软件工程是什么？</h2><p>以工程化的方法开发软件，软件工程即用工程、科学和数学的原则和方法研制、维护计算机软件的有关技术及方法，其优点是以较小的代价开发高质量的软件并有效地维护它。</p><h2 id="软件工程学概述"><a href="#软件工程学概述" class="headerlink" title="软件工程学概述"></a>软件工程学概述</h2><h3 id="软件危机"><a href="#软件危机" class="headerlink" title="软件危机"></a>软件危机</h3><p>软件危机指在计算机软件的<strong>开发</strong>和<strong>维护</strong>过程中，所遇到的一系列严重问题。</p><ol><li>软件开发的预算和时间不可预测(不可控)</li><li>软件质量得不到保证(不可用)</li><li>维护非常困难(不可维护)  </li></ol><p>按工程化的原则和方法组织软件开发工作是有效的，是摆脱软件危机的一个主要方法。</p><h3 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h3><h4 id="软件工程是什么？-1"><a href="#软件工程是什么？-1" class="headerlink" title="软件工程是什么？"></a>软件工程是什么？</h4><p>研究和应用如何以系统性、规范化的、可定量的过程化方法，以及如何把经过实践验证而证明正确的管理技术和当前能够得到最好的技术方法结合起来</p><h4 id="软件工程方法学"><a href="#软件工程方法学" class="headerlink" title="软件工程方法学"></a>软件工程方法学</h4><p><strong>软件工程方法学三要素：工具、方法和过程</strong>——</p><h4 id="软件工程方法学思想"><a href="#软件工程方法学思想" class="headerlink" title="软件工程方法学思想"></a>软件工程方法学思想</h4><ol><li>结构化方法（生命周期方法学或结构化方法）</li><li>面向对象方法</li><li>面向构件(服务)</li><li>敏捷方法</li></ol><h3 id="软件生命周期"><a href="#软件生命周期" class="headerlink" title="软件生命周期"></a>软件生命周期</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>指软件孕育、诞生、成长、成熟、衰亡的生存过程<br>一般有五个阶段：需求定义、设计、编码、测试及维护</p><h4 id="软件生命周期模型"><a href="#软件生命周期模型" class="headerlink" title="软件生命周期模型"></a>软件生命周期模型</h4><p>重点！<br><strong>瀑布模型、快速原型模型、增量模型、螺旋模型、喷泉模型、RUP、敏捷过程等</strong></p><h3 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h3><p>为了获得高质量软件所需要完成的一系列任务的框架，它规定了完成各项任务的工作步骤。</p><h1 id="可行性研究"><a href="#可行性研究" class="headerlink" title="可行性研究"></a>可行性研究</h1><h2 id="系统流程图（不是程序流程图）"><a href="#系统流程图（不是程序流程图）" class="headerlink" title="系统流程图（不是程序流程图）"></a>系统流程图（不是程序流程图）</h2><p><img src="%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE.png"><br><img src="%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE%E8%A1%A5%E5%85%85.png"></p><p><strong>一个例子</strong><br><img src="%E5%8D%A1%E5%BC%8F%E5%B0%B1%E9%A4%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="卡式就餐系统的系统流程图"></p><h2 id="数据流图"><a href="#数据流图" class="headerlink" title="数据流图"></a>数据流图</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>数据流图拥有的成分：源点/终点、处理、数据存储、数据流</strong><br>数据流图只考虑必须完成的逻辑功能 (“做什么”), 而不考虑如何实现这些功能(“怎么做”)。</p><p>数据流图是重点中的重点，详细画法一定要上网搜索别的博客！（或者查书）</p><h3 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h3><p><img src="%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E5%88%86%E5%B1%82.png"></p><h2 id="成本分析"><a href="#成本分析" class="headerlink" title="成本分析"></a>成本分析</h2><h3 id="代码行"><a href="#代码行" class="headerlink" title="代码行"></a>代码行</h3><p>代码行方法：根据经验和历史数据，估算实现一个功能需要多少源程序行数，用每行代码的平均成本乘以行数。</p><h3 id="功能点"><a href="#功能点" class="headerlink" title="功能点"></a>功能点</h3><p>略</p><h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><ol><li>基本任务：回答必须做什么</li><li>三种模型：数据模型（实体联系图）、功能模型（数据流图）、行为模型（状态转换图）</li><li>三个阶段<br> a. 需求获取阶段（问题分析）<br> b. 需求规约/规格说明阶段（需求描述）<br> c. 需求验证阶段（需求评审）</li></ol><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>需求分析的任务：</p><ol><li>确定对系统的综合要求：P56<br>功能需求、性能需求、运行要求、未来可能的扩充要求等</li><li>分析系统的数据要求：P57<br> a. 建立概念模型( ER 图)<br> b. 形象描绘数据结构( 层次方框图、Warnier 图、IPO图)<br> c. 数据结构规范化</li><li>导出系统的逻辑模型: P58</li><li>修正系统开发计划：重估成本、进度</li><li>开发原型系统</li></ol><h1 id="总体设计"><a href="#总体设计" class="headerlink" title="总体设计"></a>总体设计</h1><h2 id="总体设计概念及任务-常用的软件体系结构"><a href="#总体设计概念及任务-常用的软件体系结构" class="headerlink" title="总体设计概念及任务(常用的软件体系结构)"></a>总体设计概念及任务(常用的软件体系结构)</h2><p>根据软件需求，设计软件系统结构和数据结构，确定程序的组成模块及模块之间的相互关系<br>① 制定规范。接口规约、编码规范、界面规范、数据库设计规范等。<br>② 设计软件系统结构（简称体系结构）（模块划分、模块功能、模块接口、质量评估）<br>③ 数据结构及数据库设计 （根据ER图和DD设计具体数据结构）<br>④ 接口设计(包括界面设计）<br>⑤ 编写概要设计文档<br>⑥ 概要设计评审</p><h2 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h2><h2 id="启发规则"><a href="#启发规则" class="headerlink" title="启发规则"></a>启发规则</h2><h2 id="描绘软件结构的图形工具"><a href="#描绘软件结构的图形工具" class="headerlink" title="描绘软件结构的图形工具"></a>描绘软件结构的图形工具</h2><h2 id="面向数据流的设计方法"><a href="#面向数据流的设计方法" class="headerlink" title="面向数据流的设计方法"></a>面向数据流的设计方法</h2><h2 id="概要设计说明书"><a href="#概要设计说明书" class="headerlink" title="概要设计说明书"></a>概要设计说明书</h2><h1 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h1><h2 id="对象模型"><a href="#对象模型" class="headerlink" title="对象模型"></a>对象模型</h2><p>类图</p><h2 id="动态模型"><a href="#动态模型" class="headerlink" title="动态模型"></a>动态模型</h2><p>状态图</p><h2 id="功能模型"><a href="#功能模型" class="headerlink" title="功能模型"></a>功能模型</h2><p>用例图</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件工程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件工程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>文法问题处理器</title>
     <link href="/2022/01/02/%E6%96%87%E6%B3%95%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E5%99%A8/"/>
     <url>/2022/01/02/%E6%96%87%E6%B3%95%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E5%99%A8/</url>
@@ -488,31 +513,6 @@
     <tags>
       
       <tag>linux</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>软件工程</title>
-    <link href="/2021/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    <url>/2021/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
-    
-    <content type="html"><![CDATA[<h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><h2 id="软件的概念"><a href="#软件的概念" class="headerlink" title="软件的概念"></a>软件的概念</h2><p>程序+数据+文档</p><h2 id="软件工程是什么？"><a href="#软件工程是什么？" class="headerlink" title="软件工程是什么？"></a>软件工程是什么？</h2><p>以工程化的方法开发软件，软件工程即用工程、科学和数学的原则和方法研制、维护计算机软件的有关技术及方法，其优点是以较小的代价开发高质量的软件并有效地维护它。</p><h2 id="软件工程学概述"><a href="#软件工程学概述" class="headerlink" title="软件工程学概述"></a>软件工程学概述</h2><h3 id="软件危机"><a href="#软件危机" class="headerlink" title="软件危机"></a>软件危机</h3><p>软件危机指在计算机软件的<strong>开发</strong>和<strong>维护</strong>过程中，所遇到的一系列严重问题。</p><ol><li>软件开发的预算和时间不可预测(不可控)</li><li>软件质量得不到保证(不可用)</li><li>维护非常困难(不可维护)  </li></ol><p>按工程化的原则和方法组织软件开发工作是有效的，是摆脱软件危机的一个主要方法。</p><h3 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h3><h4 id="软件工程是什么？-1"><a href="#软件工程是什么？-1" class="headerlink" title="软件工程是什么？"></a>软件工程是什么？</h4><p>研究和应用如何以系统性、规范化的、可定量的过程化方法，以及如何把经过实践验证而证明正确的管理技术和当前能够得到最好的技术方法结合起来</p><h4 id="软件工程方法学"><a href="#软件工程方法学" class="headerlink" title="软件工程方法学"></a>软件工程方法学</h4><p><strong>软件工程方法学三要素：工具、方法和过程</strong>——</p><h4 id="软件工程方法学思想"><a href="#软件工程方法学思想" class="headerlink" title="软件工程方法学思想"></a>软件工程方法学思想</h4><ol><li>结构化方法（生命周期方法学或结构化方法）</li><li>面向对象方法</li><li>面向构件(服务)</li><li>敏捷方法</li></ol><h3 id="软件生命周期"><a href="#软件生命周期" class="headerlink" title="软件生命周期"></a>软件生命周期</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>指软件孕育、诞生、成长、成熟、衰亡的生存过程<br>一般有五个阶段：需求定义、设计、编码、测试及维护</p><h4 id="软件生命周期模型"><a href="#软件生命周期模型" class="headerlink" title="软件生命周期模型"></a>软件生命周期模型</h4><p>重点！<br><strong>瀑布模型、快速原型模型、增量模型、螺旋模型、喷泉模型、RUP、敏捷过程等</strong></p><h3 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h3><p>为了获得高质量软件所需要完成的一系列任务的框架，它规定了完成各项任务的工作步骤。</p><h1 id="可行性研究"><a href="#可行性研究" class="headerlink" title="可行性研究"></a>可行性研究</h1><h2 id="系统流程图（不是程序流程图）"><a href="#系统流程图（不是程序流程图）" class="headerlink" title="系统流程图（不是程序流程图）"></a>系统流程图（不是程序流程图）</h2><p><img src="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE.png"><br><img src="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE%E8%A1%A5%E5%85%85.png"></p><p><strong>一个例子</strong><br><img src="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%A1%E5%BC%8F%E5%B0%B1%E9%A4%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="卡式就餐系统的系统流程图"></p><h2 id="数据流图"><a href="#数据流图" class="headerlink" title="数据流图"></a>数据流图</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>数据流图拥有的成分：源点/终点、处理、数据存储、数据流</strong><br>数据流图只考虑必须完成的逻辑功能 (“做什么”), 而不考虑如何实现这些功能(“怎么做”)。</p><p>数据流图是重点中的重点，详细画法一定要上网搜索别的博客！（或者查书）</p><h3 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h3><p><img src="/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E5%88%86%E5%B1%82.png"></p><h2 id="成本分析"><a href="#成本分析" class="headerlink" title="成本分析"></a>成本分析</h2><h3 id="代码行"><a href="#代码行" class="headerlink" title="代码行"></a>代码行</h3><p>代码行方法：根据经验和历史数据，估算实现一个功能需要多少源程序行数，用每行代码的平均成本乘以行数。</p><h3 id="功能点"><a href="#功能点" class="headerlink" title="功能点"></a>功能点</h3><p>略</p><h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><ol><li>基本任务：回答必须做什么</li><li>三种模型：数据模型（实体联系图）、功能模型（数据流图）、行为模型（状态转换图）</li><li>三个阶段<br> a. 需求获取阶段（问题分析）<br> b. 需求规约/规格说明阶段（需求描述）<br> c. 需求验证阶段（需求评审）</li></ol><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>需求分析的任务：</p><ol><li>确定对系统的综合要求：P56<br>功能需求、性能需求、运行要求、未来可能的扩充要求等</li><li>分析系统的数据要求：P57<br> a. 建立概念模型( ER 图)<br> b. 形象描绘数据结构( 层次方框图、Warnier 图、IPO图)<br> c. 数据结构规范化</li><li>导出系统的逻辑模型: P58</li><li>修正系统开发计划：重估成本、进度</li><li>开发原型系统</li></ol><h1 id="总体设计"><a href="#总体设计" class="headerlink" title="总体设计"></a>总体设计</h1><h2 id="总体设计概念及任务-常用的软件体系结构"><a href="#总体设计概念及任务-常用的软件体系结构" class="headerlink" title="总体设计概念及任务(常用的软件体系结构)"></a>总体设计概念及任务(常用的软件体系结构)</h2><p>根据软件需求，设计软件系统结构和数据结构，确定程序的组成模块及模块之间的相互关系<br>① 制定规范。接口规约、编码规范、界面规范、数据库设计规范等。<br>② 设计软件系统结构（简称体系结构）（模块划分、模块功能、模块接口、质量评估）<br>③ 数据结构及数据库设计 （根据ER图和DD设计具体数据结构）<br>④ 接口设计(包括界面设计）<br>⑤ 编写概要设计文档<br>⑥ 概要设计评审</p><h2 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h2><h2 id="启发规则"><a href="#启发规则" class="headerlink" title="启发规则"></a>启发规则</h2><h2 id="描绘软件结构的图形工具"><a href="#描绘软件结构的图形工具" class="headerlink" title="描绘软件结构的图形工具"></a>描绘软件结构的图形工具</h2><h2 id="面向数据流的设计方法"><a href="#面向数据流的设计方法" class="headerlink" title="面向数据流的设计方法"></a>面向数据流的设计方法</h2><h2 id="概要设计说明书"><a href="#概要设计说明书" class="headerlink" title="概要设计说明书"></a>概要设计说明书</h2><h1 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h1><h2 id="对象模型"><a href="#对象模型" class="headerlink" title="对象模型"></a>对象模型</h2><p>类图</p><h2 id="动态模型"><a href="#动态模型" class="headerlink" title="动态模型"></a>动态模型</h2><p>状态图</p><h2 id="功能模型"><a href="#功能模型" class="headerlink" title="功能模型"></a>功能模型</h2><p>用例图</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件工程</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>软件工程</tag>
       
     </tags>
     
