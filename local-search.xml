@@ -11,6 +11,20 @@
     <content type="html"><![CDATA[<p><img src="Page1.png"></p>]]></content>
     
     
+    <categories>
+      
+      <category>编译原理</category>
+      
+      <category>语法分析</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>编译原理</tag>
+      
+    </tags>
     
   </entry>
   
