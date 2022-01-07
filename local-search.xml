@@ -31,6 +31,33 @@
   
   
   <entry>
+    <title>编译原理判断LL、LR、SLR</title>
+    <link href="/2022/01/07/%E5%B8%B8%E8%A7%81%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%96%87%E6%B3%95/"/>
+    <url>/2022/01/07/%E5%B8%B8%E8%A7%81%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%96%87%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>program -&gt; stmt-sequence<br>stmt-sequence -&gt; statement { ; statement }<br>statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt | dowrite-stmt | for-stmt<br>if-stmt -&gt; if (bool-exp) then stmt-sequence [else stmt-sequence] end<br>repeat-stmt -&gt; repeat stmt-sequence until bool-exp<br>dowrite-stmt -&gt; do  stmt-sequence  while(bool-exp);<br>for-stmt–&gt;for assign-stmt  to  simple-exp  do  stmt-sequence enddo | for assign-stmt  downto  simple-exp  do  stmt-sequence enddo<br>assign-stmt -&gt; identifier [-]= exp | identifier := regex-exp<br>read-stmt -&gt; read identifier<br>write-stmt -&gt; write exp<br>exp -&gt; simple-exp [comparison-op simple-exp]<br>comparison-op -&gt;  &lt; | &gt; | &gt;= | &lt;= | &lt;&gt; | ==<br>simple-exp -&gt; term { addop term }<br>addop -&gt; + | -<br>term -&gt; pow_term{ mulop pow_term}</p><p>bool-exp -&gt; bterm { or bterm }<br>bterm -&gt; cterm{ and  cterm}<br>cterm -&gt; [not ] eterm<br>eterm -&gt; exp | ( bool-exp )</p><p>regex-exp -&gt; regex1 {| regex1 }<br>regex1 -&gt; regex2 {&amp;  regex2 }<br>regex2 -&gt; regex3 [#]<br>regex3 -&gt;  identifier | (regex-exp)</p><p>mulop -&gt; * | / | %<br>pow_term-&gt; factor { ^  factor  }<br>factor -&gt;  (exp) | number | identifier</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编译原理</category>
+      
+      <category>语法分析</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>编译原理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>软件工程</title>
     <link href="/2022/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
     <url>/2022/01/02/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
