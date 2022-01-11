@@ -17,15 +17,15 @@
   <meta name="description" content="尚仁的博客">
   <meta name="author" content="曾尚仁">
   <meta name="keywords" content="">
-  <meta name="description" content="program -&gt; stmt-sequencestmt-sequence -&gt; statement { ; statement }statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt | dowrite-stmt | for-stmtif-stmt -&gt; if (bool-exp) then stmt-s">
+  <meta name="description" content="Tiny 1234567891011121314151617181920212223242526272829program -&gt; stmt-sequencestmt-sequence -&gt; statement &amp;#123; ; statement &amp;#125;statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见语句的文法">
 <meta property="og:url" content="http://example.com/2022/01/07/%E5%B8%B8%E8%A7%81%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%96%87%E6%B3%95/index.html">
 <meta property="og:site_name" content="曾尚仁">
-<meta property="og:description" content="program -&gt; stmt-sequencestmt-sequence -&gt; statement { ; statement }statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt | dowrite-stmt | for-stmtif-stmt -&gt; if (bool-exp) then stmt-s">
+<meta property="og:description" content="Tiny 1234567891011121314151617181920212223242526272829program -&gt; stmt-sequencestmt-sequence -&gt; statement &amp;#123; ; statement &amp;#125;statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-07T07:48:25.000Z">
-<meta property="article:modified_time" content="2022-01-07T15:43:07.255Z">
+<meta property="article:modified_time" content="2022-01-11T03:03:14.801Z">
 <meta property="article:author" content="曾尚仁">
 <meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      970 字
+      1.9k 字
     </span>
   
 
@@ -231,7 +231,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3 分钟
+      6 分钟
     </span>
   
 
@@ -272,16 +272,34 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 天前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body">
-              <p>program -&gt; stmt-sequence<br>stmt-sequence -&gt; statement { ; statement }<br>statement -&gt; if-stmt | repeat-stmt | assign-stmt | read-stmt | dowrite-stmt | for-stmt<br>if-stmt -&gt; if (bool-exp) then stmt-sequence [else stmt-sequence] end<br>repeat-stmt -&gt; repeat stmt-sequence until bool-exp<br>dowrite-stmt -&gt; do  stmt-sequence  while(bool-exp);<br>for-stmt–&gt;for assign-stmt  to  simple-exp  do  stmt-sequence enddo | for assign-stmt  downto  simple-exp  do  stmt-sequence enddo<br>assign-stmt -&gt; identifier [-]= exp | identifier := regex-exp<br>read-stmt -&gt; read identifier<br>write-stmt -&gt; write exp<br>exp -&gt; simple-exp [comparison-op simple-exp]<br>comparison-op -&gt;  &lt; | &gt; | &gt;= | &lt;= | &lt;&gt; | ==<br>simple-exp -&gt; term { addop term }<br>addop -&gt; + | -<br>term -&gt; pow_term{ mulop pow_term}</p>
-<p>bool-exp -&gt; bterm { or bterm }<br>bterm -&gt; cterm{ and  cterm}<br>cterm -&gt; [not ] eterm<br>eterm -&gt; exp | ( bool-exp )</p>
-<p>regex-exp -&gt; regex1 {| regex1 }<br>regex1 -&gt; regex2 {&amp;  regex2 }<br>regex2 -&gt; regex3 [#]<br>regex3 -&gt;  identifier | (regex-exp)</p>
-<p>mulop -&gt; * | / | %<br>pow_term-&gt; factor { ^  factor  }<br>factor -&gt;  (exp) | number | identifier</p>
+              <p>Tiny</p>
+<figure class="highlight xl"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs xl"><span class="hljs-function"><span class="hljs-title">program</span> -&gt;</span> stmt-sequence<br><span class="hljs-function"><span class="hljs-title">stmt</span>-sequence -&gt;</span> statement &#123; ; statement &#125;<br><span class="hljs-function"><span class="hljs-title">statement</span> -&gt;</span> <span class="hljs-keyword">if</span>-stmt | repeat-stmt | assign-stmt | read-stmt | dowrite-stmt | <span class="hljs-keyword">for</span>-stmt<br><span class="hljs-function"><span class="hljs-title">if</span>-stmt -&gt;</span> <span class="hljs-keyword">if</span> (bool-<span class="hljs-built_in">exp</span>) <span class="hljs-keyword">then</span> stmt-sequence [<span class="hljs-keyword">else</span> stmt-sequence] end<br><span class="hljs-function"><span class="hljs-title">repeat</span>-stmt -&gt;</span> repeat stmt-sequence <span class="hljs-keyword">until</span> bool-<span class="hljs-built_in">exp</span><br><span class="hljs-function"><span class="hljs-title">dowrite</span>-stmt -&gt;</span> <span class="hljs-keyword">do</span>  stmt-sequence  <span class="hljs-keyword">while</span>(bool-<span class="hljs-built_in">exp</span>);<br><span class="hljs-function"><span class="hljs-title">for</span>-stmt--&gt;</span><span class="hljs-keyword">for</span> assign-stmt  to  simple-<span class="hljs-built_in">exp</span>  <span class="hljs-keyword">do</span>  stmt-sequence enddo | <span class="hljs-keyword">for</span> assign-stmt  downto  simple-<span class="hljs-built_in">exp</span>  <span class="hljs-keyword">do</span>  stmt-sequence enddo<br><span class="hljs-function"><span class="hljs-title">assign</span>-stmt -&gt;</span> identifier [-]= <span class="hljs-built_in">exp</span> | identifier := regex-<span class="hljs-built_in">exp</span><br><span class="hljs-function"><span class="hljs-title">read</span>-stmt -&gt;</span> read identifier<br><span class="hljs-function"><span class="hljs-title">write</span>-stmt -&gt;</span> write <span class="hljs-built_in">exp</span><br><span class="hljs-function"><span class="hljs-title">exp</span> -&gt;</span> simple-<span class="hljs-built_in">exp</span> [comparison-op simple-<span class="hljs-built_in">exp</span>] <br><span class="hljs-function"><span class="hljs-title">comparison</span>-op -&gt;</span>  &lt; | &gt; | &gt;= | &lt;= | &lt;&gt; | == <br><span class="hljs-function"><span class="hljs-title">simple</span>-<span class="hljs-built_in">exp</span> -&gt;</span> term &#123; addop term &#125;<br><span class="hljs-function"><span class="hljs-title">addop</span> -&gt;</span> + | -<br><span class="hljs-function"><span class="hljs-title">term</span> -&gt;</span> pow_term&#123; mulop pow_term&#125;<br><br><span class="hljs-function"><span class="hljs-title">bool</span>-<span class="hljs-built_in">exp</span> -&gt;</span> bterm &#123; <span class="hljs-built_in">or</span> bterm &#125;<br><span class="hljs-function"><span class="hljs-title">bterm</span> -&gt;</span> cterm&#123; <span class="hljs-built_in">and</span>  cterm&#125; <br><span class="hljs-function"><span class="hljs-title">cterm</span> -&gt;</span> [<span class="hljs-built_in">not</span> ] eterm<br><span class="hljs-function"><span class="hljs-title">eterm</span> -&gt;</span> <span class="hljs-built_in">exp</span> | ( bool-<span class="hljs-built_in">exp</span> )<br><br><span class="hljs-function"><span class="hljs-title">regex</span>-<span class="hljs-built_in">exp</span> -&gt;</span> regex1 &#123;| regex1 &#125;<br><span class="hljs-function"><span class="hljs-title">regex1</span> -&gt;</span> regex2 &#123;&amp;  regex2 &#125; <br><span class="hljs-function"><span class="hljs-title">regex2</span> -&gt;</span> regex3 [#]<br><span class="hljs-function"><span class="hljs-title">regex3</span> -&gt;</span>  identifier | (regex-<span class="hljs-built_in">exp</span>)<br><br><span class="hljs-function"><span class="hljs-title">mulop</span> -&gt;</span> * | / | %<br><span class="hljs-function"><span class="hljs-title">pow_term</span>-&gt;</span> factor &#123; ^  factor  &#125;<br><span class="hljs-function"><span class="hljs-title">factor</span> -&gt;</span>  (<span class="hljs-built_in">exp</span>) | number | identifier<br></code></pre></div></td></tr></table></figure>
 
+
+<p>算术表达式</p>
+<figure class="highlight xl"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs xl"><span class="hljs-function"><span class="hljs-title">exp</span>-&gt;</span><span class="hljs-built_in">exp</span> addop term|term<br><span class="hljs-function"><span class="hljs-title">addop</span>-&gt;</span>+|-<br><span class="hljs-function"><span class="hljs-title">term</span>-&gt;</span>term mulop factor|factor<br><span class="hljs-function"><span class="hljs-title">mulop</span>-&gt;</span>*|/<br><span class="hljs-function"><span class="hljs-title">factor</span>-&gt;</span>(<span class="hljs-built_in">exp</span>)|n<br><br>转换成EBNF<br><span class="hljs-function"><span class="hljs-title">exp</span>-&gt;</span>term &#123;(+|-) term&#125;<br><span class="hljs-function"><span class="hljs-title">term</span>-&gt;</span>factor &#123;(*|/) factor&#125;<br><span class="hljs-function"><span class="hljs-title">factor</span>-&gt;</span>(<span class="hljs-built_in">exp</span>)|n<br><br></code></pre></div></td></tr></table></figure>
+
+<p>说明语句</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ocaml"><span class="hljs-type">S</span>-&gt;<span class="hljs-type">V</span><br><span class="hljs-type">V</span>-&gt;<span class="hljs-type">V</span>,i    &#123;fill(entry(i),v.<span class="hljs-keyword">type</span>);v.<span class="hljs-keyword">type</span>=v.<span class="hljs-keyword">type</span>&#125;<br><span class="hljs-type">V</span>-&gt;<span class="hljs-type">T</span>,i    &#123;fill(entry(i),<span class="hljs-type">T</span>.<span class="hljs-keyword">type</span>);v.<span class="hljs-keyword">type</span>=<span class="hljs-type">T</span>.<span class="hljs-keyword">type</span>&#125;<br><span class="hljs-type">T</span>-&gt;<span class="hljs-built_in">int</span>|<span class="hljs-built_in">char</span>|<span class="hljs-built_in">float</span>|double<br></code></pre></div></td></tr></table></figure>
+
+<p>赋值语句</p>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros">S-&gt;<span class="hljs-attribute">id</span>=E<br></code></pre></div></td></tr></table></figure>
+
+
+<p>逻辑表达式</p>
+<figure class="highlight coq"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs coq">BE-&gt;BE|<span class="hljs-type">|BT</span><br>BE-&gt;BT<br>BT-&gt;BT&amp;&amp;BF<br>BT-&gt;BF<br>BF-&gt;!BF<br>BF-&gt;(BE)<br>BF-&gt;E rop E<br>BF-&gt;i rop i<br>BF-&gt;i<br><br>文法改写(通过&amp;&amp;和|<span class="hljs-type">|进行分割)</span><br><span class="hljs-type">BE</span>-&gt;BE` BT<br>BE`-&gt;BE |<span class="hljs-type">|</span><br><span class="hljs-type">BE</span>-&gt;BT<br>BT-&gt;BT` BF<br>BT`-&gt;BT &amp;&amp;<br>BT-&gt;BF<br>BF-&gt;!BF<br>BF-&gt;(BE)<br>BF-&gt;E rop E<br>BF-&gt;i rop i<br>BF-&gt;i<br></code></pre></div></td></tr></table></figure>
+
+
+<p>if语句</p>
+<figure class="highlight armasm"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs armasm">S-&gt;<span class="hljs-meta">if</span> (E) <span class="hljs-built_in">S1</span><br>S-&gt;<span class="hljs-meta">if</span> (E) <span class="hljs-built_in">S1</span> <span class="hljs-meta">else</span> <span class="hljs-built_in">S2</span><br><br>改造：<br>C-&gt;<span class="hljs-meta">if</span> (E)<br>T-&gt;C <span class="hljs-built_in">S1</span> <span class="hljs-meta">else</span><br>S-&gt;T <span class="hljs-built_in">S2</span><br>S-&gt;C <span class="hljs-built_in">S1</span><br></code></pre></div></td></tr></table></figure>
+
+<p>while语句</p>
+<figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir">S-&gt;<span class="hljs-keyword">while</span> (E) S1<br><br>改造<br>W-&gt;<span class="hljs-keyword">while</span><br>Wd-&gt;W (E)<br>S-&gt;wd S1<br></code></pre></div></td></tr></table></figure>
             </div>
             <hr>
             <div>
