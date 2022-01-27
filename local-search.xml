@@ -535,6 +535,31 @@
   
   
   <entry>
+    <title>2022编译原理原题</title>
+    <link href="/2021/11/07/2022%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%8E%9F%E9%A2%98/"/>
+    <url>/2021/11/07/2022%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%8E%9F%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>第一题：写出能够分析中间一个b，两边相同数量a这种形式的表达式的两种解决办法<br>第二题：写出实验二DFA最小化的程序<br>第三题：写出实验三消除左公因子的程序<br>第四题：写出后缀表达式的文法规则，并且画出LALR （1）DFA和分析表<br>第五题： 正则表达式的文法规则和生成四元组的语义动作<br>第六题：写出实验四 扩充for语句的文法规则和对应的语法树分析程序</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编译原理</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>linux|ubuntu 安装jdk</title>
     <link href="/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
     <url>/2021/11/07/linux%E4%B8%8B%E5%AE%89%E8%A3%85jdk/</url>
